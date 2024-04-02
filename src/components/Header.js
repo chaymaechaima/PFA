@@ -32,17 +32,17 @@ const Header = () => {
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
                         <li id='element' class="nav-item active mr-5 ml-5">
-                            <a class="nav-link"><Link id='link' to="/PFA" className='header-link'>A propos</Link></a>
+                            <a class="nav-link"><Link id='link' to="/" className='header-link'>A propos</Link></a>
                         </li>
                         <li id='element' class="nav-item active mr-5 ml-5">
-                            <a class="nav-link"><Link id='link' to="/PFA" className='header-link'>Nos produit</Link></a>
+                            <a class="nav-link"><Link id='link' to="/" className='header-link'>Nos produit</Link></a>
                         </li>
 
                         <li id='element' class="nav-item mr-5 ml-5">
                             <a class="nav-link"><Link id='link' to="/Contact" className='header-link'>Contact</Link></a>
                         </li>
                         <li id='element' class="nav-item mr-5 ml-5">
-                            <a class="nav-link"><Link id='link' to="/PFA" className='header-link'>Customisation</Link></a>
+                            <a class="nav-link"><Link id='link' to="/" className='header-link'>Customisation</Link></a>
                         </li>
                         <li id='element' class="nav-item mr-5 ml-5">
                             <a class="nav-link"><Link id='link' to="/Signup" className='header-link'>Se Connecter</Link></a>
