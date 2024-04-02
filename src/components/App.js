@@ -27,12 +27,12 @@ function App() {
             <Header />
                 <div className='pages'>
                     <Routes>
-                        <Route path="/PFA" element={<Apropos />} />
+                        <Route path="/PFA/" element={<Apropos />} />
                         <Route path="/Produits" element={<Shop />} />
-                        <Route path='/Contact' element={<Contact/>}/>
-                        <Route path='/Signup' element={<Signup/>}/>
+                        <Route path='/PFA/Contact' element={<Contact/>}/>
+                        <Route path='/PFA/Signup' element={<Signup/>}/>
                         <Route path='/Login' element={<Login/>}/>
-                        <Route path='/Cart' element={<Cart />}/>
+                        <Route path='/PFA/Cart' element={<Cart />}/>
                         <Route path="/CPU" element={<CPU />} />
                         <Route path="/GPU" element={<GPU />} />
                         <Route path="/Motherboard" element={<Motherboard />} />
