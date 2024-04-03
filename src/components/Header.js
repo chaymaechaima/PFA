@@ -32,20 +32,20 @@ const Header = () => {
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
                         <li id='element' class="nav-item active mr-5 ml-5">
-                            <a class="nav-link"><Link id='link' to="/PFA/" className='header-link'>A propos</Link></a>
+                            <a class="nav-link"><Link id='link' to="/" className='header-link'>A propos</Link></a>
                         </li>
                         <li id='element' class="nav-item active mr-5 ml-5">
-                            <a class="nav-link"><Link id='link' to="/PFA/" className='header-link'>Nos produit</Link></a>
+                            <a class="nav-link"><Link id='link' to="/" className='header-link'>Nos produit</Link></a>
                         </li>
 
                         <li id='element' class="nav-item mr-5 ml-5">
-                            <a class="nav-link"><Link id='link' to="/PFA/Contact" className='header-link'>Contact</Link></a>
+                            <a class="nav-link"><Link id='link' to="/Contact" className='header-link'>Contact</Link></a>
                         </li>
                         <li id='element' class="nav-item mr-5 ml-5">
-                            <a class="nav-link"><Link id='link' to="/PFA/" className='header-link'>Customisation</Link></a>
+                            <a class="nav-link"><Link id='link' to="/" className='header-link'>Customisation</Link></a>
                         </li>
                         <li id='element' class="nav-item mr-5 ml-5">
-                            <a class="nav-link"><Link id='link' to="/PFA/Signup" className='header-link'>Se Connecter</Link></a>
+                            <a class="nav-link"><Link id='link' to="/Signup" className='header-link'>Se Connecter</Link></a>
 
                             {/* <div class='profile'>
                                 <Link id='link' to="/Profile" className='header-link'>
@@ -55,7 +55,7 @@ const Header = () => {
 
                         </li>
                         <li id="mobilebtn" class="nav-item mr-5 ml-5">
-                            <Link id='link' to="/PFA/Cart" className='header-link'>
+                            <Link id='link' to="/Cart" className='header-link'>
                                 <button id="Cart" class="btn" type="submit">
                                     Panier
                                     <span> </span>
