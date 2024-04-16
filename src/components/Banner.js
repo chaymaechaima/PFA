@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import '../styles/Banner.css';
 
 const images = [
-  require('../pics/banner4.jpg'),
-  require('../pics/banner3.jpg')
+  require('../pics/banner3.webp'),
+  require('../pics/banner4.jpeg')
 ];
 
 const delay = 3500;
