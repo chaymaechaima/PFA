@@ -3,7 +3,7 @@ import '../styles/Banner.css';
 
 const images = [
   require('../pics/banner3.webp'),
-  require('../pics/banner4.jpeg')
+  require('../pics/banner4.jpg')
 ];
 
 const delay = 3500;
