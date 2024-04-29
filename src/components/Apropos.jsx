@@ -3,20 +3,20 @@ import Slideshow from './Banner';
 import '../styles/Apropos.css';
 
 const Apropos= ()=>{
-    let img = require('../pics/banner3.webp')
+    let img = require('../pics/case1.jpg')
     let img2 = require('../pics/people1.png')
     return(
         <div class="d-flex flex-column h-100">
-    
+        <Slideshow/>
         <main class="flex-shrink-0">
        
-            <header id="header-a" class="bg-secondary py-5">
+            <header id="header-a" class="bg-white py-5">
                 <div class="container px-5">
                     <div class="row gx-5 align-items-center justify-content-center">
                         <div class="col-lg-8 col-xl-7 col-xxl-6">
                             <div class="my-5 text-center text-xl-start">
-                                <h1 class="display-5 fw-bolder text-white mb-2">A propos de <br/><h1 class="display-5 fw-bolder text-white mb-2">Nous</h1></h1>
-                                <p class="lead fw-normal text-white-50 mb-4">PRO-tection est une nouvelle venue sur le marché, ayant débuté ses activités le 1er janvier 2024, spécialisée dans la production de hard cases. Nous avons rassemblé une équipe de cadres compétents, forts d'années d'expérience dans le domaine de la manufacture et possédant une grande expertise dans les emballages de protection. Notre engagement est de fournir des hard cases de haute qualité avec une gamme variée pour répondre à différents besoins. Nous cherchons à bâtir une solide réputation basée sur la fabrication sur mesure et sur le dévouement envers une approche centrée sur le client.</p>
+                                <h1 class="display-5 fw-bolder text-black mb-2">A propos de <br/><h1 class="display-5 fw-bolder text-black mb-2">Nous</h1></h1>
+                                <p class="lead fw-normal text-black-50 mb-4">PRO-tection est une nouvelle venue sur le marché, ayant débuté ses activités le 1er janvier 2024, spécialisée dans la production de hard cases. Nous avons rassemblé une équipe de cadres compétents, forts d'années d'expérience dans le domaine de la manufacture et possédant une grande expertise dans les emballages de protection. Notre engagement est de fournir des hard cases de haute qualité avec une gamme variée pour répondre à différents besoins. Nous cherchons à bâtir une solide réputation basée sur la fabrication sur mesure et sur le dévouement envers une approche centrée sur le client.</p>
                             </div>
                         </div>
                         <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src={img} alt="..." /></div>
@@ -27,7 +27,7 @@ const Apropos= ()=>{
             <section class="py-5" id="features">
                 <div class="container px-5 my-5">
                     <div class="row gx-5">
-                        <div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">NOS VALEURS</h2><img id="case-img2" className="img-fluid" src={img2}></img> </div>
+                        <div class="col-lg-4 mb-5 mb-lg-0"><h2 class="display-5 fw-bolder text-black mb-2">Nos valeurs</h2><img id="case-img2" className="img-fluid" src={img2}></img> </div>
                           
                         <div class="col-lg-8">
                             <div class="row gx-5 row-cols-1 row-cols-md-2">
@@ -72,7 +72,7 @@ const Apropos= ()=>{
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-10 col-xl-7">
                             <div class="text-center">
-                                <div class="fs-4 mb-4 fst-italic">"Chez PRO-tection, nous croyons en la protection sans compromis du style. Découvrez notre sélection de hard cases qui allient durabilité et esthétique pour protéger vos gadgets avec confiance, sans sacrifier l'apparence."</div>
+                                <div class="fs-4 mb-4 fst-italic">"Chez PROgide, nous croyons en la protection sans compromis du style. Découvrez notre sélection de hard cases qui allient durabilité et esthétique pour protéger vos gadgets avec confiance, sans sacrifier l'apparence."</div>
                                 <div class="d-flex align-items-center justify-content-center">
 
                                 </div>
