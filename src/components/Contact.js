@@ -1,8 +1,12 @@
 import React from "react";
+
 const Contact=()=>{
+    let img = require('../pics/banner3.webp')
+
     return(
-        <div>
-            <p>Hello World</p>
+        <div class="d-flex flex-column h-100">
+    
+
         </div>
     )
 }

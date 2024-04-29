@@ -27,7 +27,7 @@ const Header = () => {
     return (
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <img src={logo}></img>
+                <img id="logo" src={logo}></img>
 
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
@@ -43,16 +43,6 @@ const Header = () => {
                         </li>
                         <li id='element' class="nav-item mr-5 ml-5">
                             <a class="nav-link"><Link id='link' to="/" className='header-link'>Customisation</Link></a>
-                        </li>
-                        <li id='element' class="nav-item mr-5 ml-5">
-                            <a class="nav-link"><Link id='link' to="/Signup" className='header-link'>Se Connecter</Link></a>
-
-                            {/* <div class='profile'>
-                                <Link id='link' to="/Profile" className='header-link'>
-                                    <img src={img1}></img><a>MedXD</a>
-                                </Link>
-                            </div> */}
-
                         </li>
                         <li id="mobilebtn" class="nav-item mr-5 ml-5">
                             <Link id='link' to="/Cart" className='header-link'>
@@ -70,7 +60,7 @@ const Header = () => {
                         <li class="nav-item mx-2">
                             <Link id='link' to="/Cart" className='header-link'>
                                 <button id="Cart" class="btn">
-                                    Cart
+                                    Panier
                                     <span> </span>
                                     <span id='items_number' class="badge text-white ms-1 rounded-pill">{numberOfItems}</span>
                                 </button>
