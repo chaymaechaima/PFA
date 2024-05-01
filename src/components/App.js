@@ -11,9 +11,15 @@ import RAM from './pages/RAM';
 import SSD from './pages/SSD';
 import Cart from './Cart';
 import Contact from './Contact';
-import Signup from './Signup'
-import Login from './Login'
 import Apropos from './Apropos'
+import Costume from './costume'
+import Costume2 from './costume2'
+import Costume3 from './costume3'
+import Costume4 from './costume4'
+import Costume5 from './costume5'
+import Costume6 from './costume6'
+import Costume7 from './costume7'
+import Costume8 from './costume8'
 
 import { Link , Routes, Route } from 'react-router-dom';
 
@@ -30,9 +36,15 @@ function App() {
                         <Route path="/" element={<Apropos />} />
                         <Route path="/Produits" element={<Shop />} />
                         <Route path='/Contact' element={<Contact/>}/>
-                        <Route path='/Signup' element={<Signup/>}/>
-                        <Route path='/Login' element={<Login/>}/>
                         <Route path='/Cart' element={<Cart />}/>
+                        <Route path='/product1' element={<Costume />}/>
+                        <Route path='/product2' element={<Costume2 />}/>
+                        <Route path='/product3' element={<Costume3 />}/>
+                        <Route path='/product4' element={<Costume4 />}/>
+                        <Route path='/product5' element={<Costume5 />}/>
+                        <Route path='/product6' element={<Costume6 />}/>
+                        <Route path='/product7' element={<Costume7 />}/>
+                        <Route path='/product8' element={<Costume8 />}/>
                     </Routes>
                 </div>
                 <Footer />

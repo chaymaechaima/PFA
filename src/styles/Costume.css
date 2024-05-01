@@ -1,0 +1,104 @@
+/* Card Styles */
+.card {
+    border: none;
+    overflow: hidden;
+}
+.thumbnail_images {
+   scale: 0.7;
+   margin-right: 6.5%;
+}
+/* Thumbnail Styles */
+.thumbnail_images ul {
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.thumbnail_images ul li {
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid #eee;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.thumbnail_images ul li:hover {
+    border: 2px solid #000;
+}
+
+/* Main Image Styles */
+.main_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Heart Icon Styles */
+
+
+/* Content Styles */
+.content p {
+    font-size: 12px;
+}
+
+/* Ratings Styles */
+.ratings span {
+    font-size: 14px;
+    margin-left: 12px;
+}
+
+/* Colors Styles */
+.colors {
+    margin-top: 5px;
+    
+}
+
+.colors ul {
+    list-style: none;
+    display: flex;
+    padding-left: 0px;
+}
+
+.colors ul li {
+    height: 20px;
+    width: 40px;
+    display: flex;
+
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+/* Right Side Styles */
+.right-side {
+    position: relative;
+}
+
+/* Button Styles */
+.buttons .btn {
+    height: 50px;
+    width: 150px;
+    border-radius: 0px !important;
+}
+#marker-1{
+    background-color: #000;
+    margin-left: 5%;
+}
+#marker-2{
+    background-color: #ff0000;
+}
+#marker-3{
+    background-color: #c3ff00;
+}
+#marker-4{
+    background-color: #00ffea;
+}
+#cosen{
+    font-size: 15px;
+}

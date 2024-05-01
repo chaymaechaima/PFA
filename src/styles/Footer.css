@@ -36,7 +36,7 @@ display: inline-block;
 .footer_profile ul li a img{width:60px;}
 
 .footer_profile ul li a {
-	background: #232a34;
+	background: transparent;
 	width: 40px;
 	height: 40px;
 	display: block;
@@ -58,4 +58,14 @@ display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: #fff;
+}
+.payment-icon-list li{
+	margin: 0.5%;
+}
+#copyright{
+	color:#fff;
+	font-size: 13px;
+}
+.footer-copyright{
+	margin: 1%;
 }

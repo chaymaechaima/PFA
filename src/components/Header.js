@@ -4,25 +4,34 @@ import '../styles/Header.css'
 
 
 const Header = () => {
-    //   let img1 = require('../pics/user.ico');
-
-    const getNumberOfItemsInLocalStorage = () => {
-        const items = JSON.parse(localStorage.getItem("cartItems")) || [];
-        return items.length;
-    };
 
     const [numberOfItems, setNumberOfItems] = useState(0);
-
-    const updateNumberOfItems = () => {
-        const count = getNumberOfItemsInLocalStorage();
-        setNumberOfItems(count);
-    };
-
     useEffect(() => {
-       
+        // Function to get the number of items in local storage
+        const getNumberOfItemsInLocalStorage = () => {
+            const items = JSON.parse(localStorage.getItem("cartItems")) || [];
+            return items.length;
+        };
+    
+        // Function to update the number of items
+        const updateNumberOfItems = () => {
+            const count = getNumberOfItemsInLocalStorage();
+            setNumberOfItems(count);
+        };
+    
+        // Update the number of items initially
         updateNumberOfItems();
-
-    }, []);
+    
+        // Set up interval to periodically check and update the number of items
+        const intervalId = setInterval(updateNumberOfItems, 500); // Update every second
+    
+        // Clean up the interval when the component unmounts
+        return () => {
+            clearInterval(intervalId);
+        };
+    }, []); // Empty dependency array ensures this effect runs only once when the component mounts
+    // Empty dependency array ensures this effect runs only once when the component mounts
+    
     let logo = require('../pics/logo.png')
     return (
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -35,14 +44,11 @@ const Header = () => {
                             <a class="nav-link"><Link id='link' to="/" className='header-link'>A propos</Link></a>
                         </li>
                         <li id='element' class="nav-item active mr-5 ml-5">
-                            <a class="nav-link"><Link id='link' to="/" className='header-link'>Nos produit</Link></a>
+                            <a class="nav-link"><Link id='link' to="/Produits" className='header-link'>Nos produit</Link></a>
                         </li>
 
                         <li id='element' class="nav-item mr-5 ml-5">
                             <a class="nav-link"><Link id='link' to="/Contact" className='header-link'>Contact</Link></a>
-                        </li>
-                        <li id='element' class="nav-item mr-5 ml-5">
-                            <a class="nav-link"><Link id='link' to="/" className='header-link'>Customisation</Link></a>
                         </li>
                         <li id="mobilebtn" class="nav-item mr-5 ml-5">
                             <Link id='link' to="/Cart" className='header-link'>

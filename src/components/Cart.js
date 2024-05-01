@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
+
 import '../styles/Cart.css';
 
 const Cart = () => {
     const [cartItems, setCartItems] = useState([]);
     const [quantities, setQuantities] = useState({}); // State for quantities
+    const [optionsAndColors, setOptionsAndColors] = useState([]);
+
 
     useEffect(() => {
         // Fetch cart items and quantities from local storage
@@ -12,6 +15,9 @@ const Cart = () => {
 
         const storedQuantities = JSON.parse(localStorage.getItem("quantities")) || {};
         setQuantities(storedQuantities);
+
+        const optionsAndColors = storedItems.map(item => ({ options: item.options, color: item.color }));
+        setOptionsAndColors(optionsAndColors);
     }, []);
 
     // Function to handle item deletion
@@ -41,7 +47,21 @@ const Cart = () => {
         localStorage.setItem("quantities", JSON.stringify(updatedQuantities));
         localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
     };
-
+    const getColorCode = (colorIndex) => {
+        switch (colorIndex) {
+            case 0:
+                return "#000";
+            case 1:
+                return "#ff0000";
+            case 2:
+                return "#c3ff00";
+            case 3:
+                return "#00ffea";
+            default:
+                return "#000"; // Default color
+        }
+    };
+    
     return (
         <section className="h-100">
             <div className="container h-100 py-5">
@@ -49,7 +69,7 @@ const Cart = () => {
                     <div className="col-10">
 
                         <div className="text-center mb-4">
-                            <h3 className="fw-normal mb-0 text-black">Shopping Cart</h3>
+                            <h3 className="fw-normal mb-0 text-black">Panier</h3>
                         </div>
 
                         {cartItems.map((item, index) => (
@@ -59,13 +79,22 @@ const Cart = () => {
                                     <div className="row gx-3 justify-content-between align-items-center">
                                         <div className="col-md-2 col-lg-2 col-xl-2">
                                             <img
-                                                src={require(`./pages/pics/${item.image}`)}
+                                                src={require(`../pics/categories/case1/${item.image}`)}
                                                 className="img-fluid rounded-3"
                                                 alt="Product"
                                             />
                                         </div>
                                         <div className="col-md-2 col-lg-2 col-xl-2">
                                             <p id='Cname' className="lead fw-normal mb-2">{item.title}</p>
+                                        </div>
+                                        <div className="col-md-1 col-lg-1 col-xl-1">
+                                        <div id="opcolor" className="color-container">
+                                        <div
+                                            id="opcolor"
+                                            className="color-rectangle"
+                                            style={{ backgroundColor: getColorCode(item.color) }}
+                                        />
+                                    </div>
                                         </div>
                                         <div className="qty col-md-2 col-lg-2 col-xl-2">
                                             <div className='d-flex'>
@@ -90,8 +119,9 @@ const Cart = () => {
                                                 </span>
                                             </div>
                                         </div>
+
                                         <div className="col-md-2 col-lg-2 col-xl-2">
-                                            <h5 id='Cprice' className="mb-0">${item.price * item.quantity}</h5>
+                                            <p id='Cprice' className="mb-0">{item.price * item.quantity} MAD</p>
                                         </div>
                                         <div className="col-md-2 col-lg-2 col-xl-2">
                                             <button
@@ -100,21 +130,32 @@ const Cart = () => {
                                                 className="btn btn-danger"
                                                 onClick={() => handleDeleteItem(index)}
                                             >
-                                                Delete
+                                                Supprimer
                                             </button>
                                         </div>
                                     </div>
+                                    {item.options.map((option, optionIndex) => (
+                                        <img
+                                            key={optionIndex}
+                                            id="opimgs"
+                                            src={require(`../pics/costum/${option}`)}
+                                            className="option-img"
+                                            alt={`Option ${optionIndex + 1}`}
+                                        />
+                                    ))}
+
                                 </div>
 
                             </div>
+
                         ))}
 
                         <div className='card'>
-                            <h5 className='mt-1'>{`Total: $${calculateTotal(cartItems)}`}</h5>
+                            <h5 className='mt-1'>{`Total: ${calculateTotal(cartItems)} MAD`}</h5>
                         </div>
                         <div className="card">
                             <div className="card-body">
-                                <button type="button" className="btn btn-dark btn-block btn-lg">Proceed to Pay</button>
+                                <button type="button" className="btn btn-dark btn-block btn-lg">Paiement</button>
                             </div>
                         </div>
 

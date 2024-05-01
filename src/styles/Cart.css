@@ -199,3 +199,11 @@ input::-webkit-inner-spin-button {
 input:disabled{
     background-color:white;
 }
+#opimgs{
+    width: 50px;
+    margin: 2%;
+}
+#opcolor{
+    width: 40px;
+    height: 20px;
+}
