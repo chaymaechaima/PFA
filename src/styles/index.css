@@ -2,7 +2,14 @@ html{
     overflow-x: hidden;
     
 }
+@font-face {
+  font-family: 'ProductSans';
+  src: url('../fonts/ProductSans-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+*{
+  font-family: 'ProductSans';
 
+}
 
 nav{
     position:relative;
